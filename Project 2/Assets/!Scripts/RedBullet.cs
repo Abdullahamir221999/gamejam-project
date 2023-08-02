@@ -7,13 +7,13 @@ public class RedBullet : MonoBehaviour
     public float life = 3;
     private Rigidbody redbulletRb;
     private GameObject target;
-    public float speed = 0.5f;
+    public float speed = 130f;
     void Start()
     {
         redbulletRb = GetComponent<Rigidbody>();
         target = GameObject.Find("RedEnemy");
     }
-    void Update()
+    void FixedUpdate()
     {
         redbulletRb.AddForce((target.transform.position - transform.position) * speed);
     }

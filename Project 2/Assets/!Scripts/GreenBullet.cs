@@ -7,14 +7,14 @@ public class GreenBullet : MonoBehaviour
     public float life = 3;
     private Rigidbody greenbulletRb;
     private GameObject target;
-    public float speed = 0.5f;
+    public float speed = 100f;
     
     void Start()
     {
         greenbulletRb = GetComponent<Rigidbody>();
         target = GameObject.Find("GreenEnemy");
     }
-    void Update()
+    void FixedUpdate()
     {
         greenbulletRb.AddForce((target.transform.position - transform.position) * speed);
     }

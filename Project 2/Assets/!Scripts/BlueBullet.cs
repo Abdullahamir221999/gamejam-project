@@ -7,13 +7,13 @@ public class BlueBullet : MonoBehaviour
     public float life = 3;
     private Rigidbody bluebulletRb;
     private GameObject target;
-    public float speed = 0.5f;
+    public float speed = 100f;
     void Start()
     {
         bluebulletRb = GetComponent<Rigidbody>();
         target = GameObject.Find("BlueEnemy");
     }
-    void Update()
+    void FixedUpdate()
     {
         bluebulletRb.AddForce((target.transform.position - transform.position) * speed);
     }
