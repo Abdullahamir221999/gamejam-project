@@ -7,6 +7,8 @@ TagManager:
   - RedEnemy
   - BlueEnemy
   - GreenEnemy
+  - GameEnd
+  - Enemy
   layers:
   - Default
   - TransparentFX

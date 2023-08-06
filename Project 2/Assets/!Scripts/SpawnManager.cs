@@ -4,28 +4,40 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject[] enemyPrefabs;
     private float spawnRangeX = 5;
     private float spawnPosZ = 50;
+    private float startDelay = 2;
+    private float spawnInterval = 0.5f;
+    private float spawnDuration = 5f; 
+    private bool isSpawning = true;
+
     void Start()
     {
-        
+        StartCoroutine(SpawnEnemiesWithTimer());
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.G))
-        {
-            SpawnRandomEnemy();
-        }
 
     }
-    void SpawnRandomEnemy()
+
+    IEnumerator SpawnEnemiesWithTimer()
     {
-        int enemyIndex = Random.Range(0, enemyPrefabs.Length);
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 2.05f, spawnPosZ);
-        Instantiate(enemyPrefabs[enemyIndex], spawnPos, enemyPrefabs[enemyIndex].transform.rotation);
+        yield return new WaitForSeconds(startDelay);
+
+        float timer = 0f;
+        while (isSpawning && timer < spawnDuration)
+        {
+            int enemyIndex = Random.Range(0, enemyPrefabs.Length);
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 2.05f, spawnPosZ);
+            Instantiate(enemyPrefabs[enemyIndex], spawnPos, enemyPrefabs[enemyIndex].transform.rotation);
+
+            timer += spawnInterval;
+            yield return new WaitForSeconds(spawnInterval);
+        }
+
+        // Timer has completed, spawning stops.
+        isSpawning = false;
     }
 }

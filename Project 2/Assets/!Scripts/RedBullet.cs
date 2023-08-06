@@ -5,17 +5,12 @@ using UnityEngine;
 public class RedBullet : MonoBehaviour
 {
     public float life = 3;
-    private Rigidbody redbulletRb;
-    private GameObject target;
-    public float speed = 130f;
+    public int bulletDamage = 100;
+    //private Rigidbody redbulletRb;
+
     void Start()
     {
-        redbulletRb = GetComponent<Rigidbody>();
-        target = GameObject.Find("RedEnemy");
-    }
-    void FixedUpdate()
-    {
-        redbulletRb.AddForce((target.transform.position - transform.position) * speed);
+        //redbulletRb = GetComponent<Rigidbody>();
     }
     void Awake()
     {
@@ -25,16 +20,17 @@ public class RedBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RedEnemy"))
         {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("GreenEnemy"))
-        {
+            ApplyDamageToEnemy(collision.gameObject);
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("BlueEnemy"))
+        Destroy(gameObject);
+    }
+    void ApplyDamageToEnemy(GameObject enemy)
+    {
+        Enemy enemyScript = enemy.GetComponent<Enemy>();
+        if (enemyScript != null)
         {
-            Destroy(gameObject);
+            enemyScript.TakeDamage(bulletDamage);
         }
     }
 }

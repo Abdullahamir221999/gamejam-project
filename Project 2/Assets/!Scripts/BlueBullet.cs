@@ -6,16 +6,11 @@ public class BlueBullet : MonoBehaviour
 {
     public float life = 3;
     private Rigidbody bluebulletRb;
-    private GameObject target;
-    public float speed = 100f;
+    public int bulletDamage = 100;
+
     void Start()
     {
         bluebulletRb = GetComponent<Rigidbody>();
-        target = GameObject.Find("BlueEnemy");
-    }
-    void FixedUpdate()
-    {
-        bluebulletRb.AddForce((target.transform.position - transform.position) * speed);
     }
     void Awake()
     {
@@ -25,8 +20,8 @@ public class BlueBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BlueEnemy"))
         {
+            ApplyDamageToEnemy(collision.gameObject);
             Destroy(gameObject);
-            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("RedEnemy"))
         {
@@ -37,4 +32,13 @@ public class BlueBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void ApplyDamageToEnemy(GameObject enemy)
+    {
+        Enemy enemyScript = enemy.GetComponent<Enemy>();
+        if (enemyScript != null)
+        {
+            enemyScript.TakeDamage(bulletDamage);
+        }
+    }
+
 }
