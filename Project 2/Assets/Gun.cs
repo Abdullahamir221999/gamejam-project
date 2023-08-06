@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public GameObject[] bulletPrefabs; // Array of different bullet prefabs (Red, Blue, Green).
-    private int selectedBulletIndex = 0; // Index to keep track of the selected bullet.
+    public GameObject[] bulletPrefabs;
+    private int selectedBulletIndex = 0;
 
-    public float shootInterval = 0.2f; // Time interval between shots.
-    private bool isShooting = false; // Flag to check if the gun is currently shooting.
+    public float shootInterval = 0.2f;
+    private bool isShooting = false;
 
     private void Update()
     {
-        // Use Input to select the bullet color using buttons (e.g., 1 for Red, 2 for Blue, 3 for Green).
-        // Replace these with your actual button inputs as needed.
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            selectedBulletIndex = 0; // Red bullet selected
+            selectedBulletIndex = 0;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            selectedBulletIndex = 1; // Blue bullet selected
+            selectedBulletIndex = 1;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            selectedBulletIndex = 2; // Green bullet selected
+            selectedBulletIndex = 2;
         }
 
         // Check if the fire button (e.g., Space) is pressed to start auto-shooting.
