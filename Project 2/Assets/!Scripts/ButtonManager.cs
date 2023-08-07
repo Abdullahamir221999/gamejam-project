@@ -1,27 +1,67 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+public enum ColorType
+{
+    Red,
+    Green,
+    Blue
+}
 
 public class ButtonManager : MonoBehaviour
 {
-    public Transform [] bulletSpawnPoint;
-    public GameObject [] bulletPrefab;
-    
-    void Update()
+    public Transform[] bulletSpawnPoints;
+    public GameObject[] bulletPrefabs;
+    public JoystickController joystickController; // Reference to the JoystickController.
+
+    public float shootingCooldown = 0.5f; // The time between each shot in seconds.
+
+    private bool isShooting = false;
+    private ColorType selectedColor = ColorType.Red; // Default selected color is Red.
+    private float shootingTimer = 0f; // Timer to control shooting cooldown.
+
+    private void Update()
     {
-        
-    }
-    public void redShoot()
-    {
-        var bullet = Instantiate(bulletPrefab[0], bulletSpawnPoint[0].position, bulletSpawnPoint[0].rotation);
-    }
-    public void blueShoot()
-    {
-        var bullet = Instantiate(bulletPrefab[1], bulletSpawnPoint[1].position, bulletSpawnPoint[1].rotation);
-    }
-    public void greenShoot()
-    {
-        var bullet = Instantiate(bulletPrefab[2], bulletSpawnPoint[2].position, bulletSpawnPoint[2].rotation);
+        // If shooting and the joystick is dragging, try to shoot.
+        if (isShooting && joystickController != null && joystickController.IsJoystickDragging())
+        {
+            // Reduce the shooting timer.
+            shootingTimer -= Time.deltaTime;
+
+            // Shoot if the cooldown is over.
+            if (shootingTimer <= 0f)
+            {
+                ShootBullet();
+                shootingTimer = shootingCooldown;
+            }
+        }
     }
 
+    public void RedButtonPressed()
+    {
+        selectedColor = ColorType.Red;
+        isShooting = true;
+    }
+
+    public void GreenButtonPressed()
+    {
+        selectedColor = ColorType.Green;
+        isShooting = true;
+    }
+
+    public void BlueButtonPressed()
+    {
+        selectedColor = ColorType.Blue;
+        isShooting = true;
+    }
+
+    public void StopShooting()
+    {
+        isShooting = false;
+    }
+
+    private void ShootBullet()
+    {
+        int selectedBulletIndex = (int)selectedColor;
+        var bullet = Instantiate(bulletPrefabs[selectedBulletIndex], bulletSpawnPoints[selectedBulletIndex].position, bulletSpawnPoints[selectedBulletIndex].rotation);
+    }
 }
