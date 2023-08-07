@@ -7,11 +7,11 @@ public class JoystickController : MonoBehaviour, IDragHandler, IEndDragHandler
     public RectTransform joystickHandle;
     public Transform turret;
 
-    public float maxRotationAngle = 45f; // The maximum rotation angle in degrees.
+    public float maxRotationAngle = 45f;
 
     private Vector2 joystickCenter;
     private Vector2 joystickInput;
-    private bool isJoystickDragging = false; // Joystick state flag.
+    private bool isJoystickDragging = false; 
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class JoystickController : MonoBehaviour, IDragHandler, IEndDragHandler
         // Clamp the angle within the specified range.
         angle = Mathf.Clamp(angle, -maxRotationAngle, maxRotationAngle);
 
-        turret.rotation = Quaternion.Euler(0f, -angle, 0f);
+        turret.rotation = Quaternion.Euler(0f, angle, 0f);
 
         // Set joystick state to true when dragging.
         isJoystickDragging = true;

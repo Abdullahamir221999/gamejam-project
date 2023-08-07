@@ -772,7 +772,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &95667829
 MonoBehaviour:
@@ -1345,7 +1345,7 @@ Transform:
   m_Children:
   - {fileID: 834187790}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &418971295
 GameObject:
@@ -1376,7 +1376,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1193882929}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &436434509
 GameObject:
@@ -1613,7 +1613,7 @@ GameObject:
   - component: {fileID: 552776455}
   - component: {fileID: 552776454}
   m_Layer: 0
-  m_Name: Fence
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1652,7 +1652,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: edaadb08ec53e6b42a372d470c43be32, type: 2}
+  - {fileID: 2100000, guid: 3d5bf6b369c418b4eac43f834cd561e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1695,7 +1695,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1193882929}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556609412
 GameObject:
@@ -2224,7 +2224,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1193882929}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -7.021}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -2675,8 +2675,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.007843138, g: 0.023529414, b: 0.3254902, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2716,14 +2716,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.3230917, y: -0, z: -0, w: 0.9463677}
-  m_LocalPosition: {x: 0, y: 13.6, z: -48.5}
+  m_LocalRotation: {x: 0.24433693, y: -0, z: -0, w: 0.9696904}
+  m_LocalPosition: {x: 0.39017805, y: 12.17, z: -13.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 37.7, y: 0, z: 0}
+  m_Father: {fileID: 1193882929}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 28.285, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3209,7 +3209,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a42d706660676824aa4cda1deca15040, type: 2}
+  - {fileID: 2100000, guid: a2daaa50b76c140459091967e5e2cd17, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3247,12 +3247,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148694255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.39017805, y: -0.21083567, z: 36.064774}
-  m_LocalScale: {x: 11, y: 0.5, z: 100}
+  m_LocalPosition: {x: 0.39017805, y: -0.21083567, z: 67.5}
+  m_LocalScale: {x: 11, y: 0.5, z: 150}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1193882929}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151214037
 GameObject:
@@ -3404,6 +3404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 1148694259}
   - {fileID: 216245087}
@@ -4419,11 +4420,11 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: ddeed831b3d4e3b47bcce076e2d9c239, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a42d706660676824aa4cda1deca15040, type: 2}
+      objectReference: {fileID: 2100000, guid: 8bb5b9b602bacf949a71dcecb0705d4c, type: 2}
     - target: {fileID: 2300002, guid: ddeed831b3d4e3b47bcce076e2d9c239, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 493998a85425f4743aabcf527e0b47a1, type: 2}
+      objectReference: {fileID: 2100000, guid: 8bb5b9b602bacf949a71dcecb0705d4c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddeed831b3d4e3b47bcce076e2d9c239, type: 3}
 --- !u!1 &1622285604 stripped
@@ -4439,7 +4440,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622285604}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7073bd010161ee4eb5adedf2421f354, type: 3}
   m_Name: 
@@ -5105,7 +5106,7 @@ Transform:
   - {fileID: 1030520922}
   - {fileID: 436434511}
   m_Father: {fileID: 1193882929}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1849573018
 GameObject:
@@ -5208,7 +5209,7 @@ PrefabInstance:
     - target: {fileID: 8560700255164384879, guid: 60a8ea5616972f349866f26f658752e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8560700255164384879, guid: 60a8ea5616972f349866f26f658752e9,
         type: 3}
@@ -5622,6 +5623,7 @@ MonoBehaviour:
   - {fileID: 4384426078459407869, guid: a3f30828961ae9f45b0576bf60c70112, type: 3}
   - {fileID: 5661022542946620930, guid: bc4ddee9be61b884aac6eeae45328a2f, type: 3}
   joystickController: {fileID: 413907130}
+  shootingCooldown: 0.5
 --- !u!4 &2066615989
 Transform:
   m_ObjectHideFlags: 0
@@ -5703,7 +5705,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2111416267
 GameObject:
@@ -5787,3 +5789,4 @@ MonoBehaviour:
   bulletSpawnPoints: []
   bulletPrefabs: []
   joystickController: {fileID: 0}
+  shootingCooldown: 0.5
