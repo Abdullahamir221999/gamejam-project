@@ -6,10 +6,10 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
     private float spawnRangeX = 5;
-    private float spawnPosZ = 50;
+    private float spawnPosZ = 90;
     private float startDelay = 2;
     private float spawnInterval = 0.5f;
-    private float spawnDuration = 5f; 
+    private float spawnDuration = 10f; 
     private bool isSpawning = true;
 
     void Start()

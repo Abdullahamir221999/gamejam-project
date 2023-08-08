@@ -21,7 +21,7 @@ public class JoystickController : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         joystickInput = (eventData.position - joystickCenter).normalized;
-        Debug.Log("Joystick Input: " + joystickInput);
+        //Debug.Log("Joystick Input: " + joystickInput);
 
         joystickHandle.position = joystickCenter + joystickInput * Mathf.Min(joystickBackground.rect.width, joystickBackground.rect.height) * 0.5f;
 

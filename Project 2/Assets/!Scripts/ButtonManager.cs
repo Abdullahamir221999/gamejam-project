@@ -40,18 +40,21 @@ public class ButtonManager : MonoBehaviour
     {
         selectedColor = ColorType.Red;
         isShooting = true;
+        Debug.Log("is red shooting: " + isShooting);
     }
 
     public void GreenButtonPressed()
     {
         selectedColor = ColorType.Green;
         isShooting = true;
+        Debug.Log("is green shooting: " + isShooting);
     }
 
     public void BlueButtonPressed()
     {
         selectedColor = ColorType.Blue;
         isShooting = true;
+        Debug.Log("is blue shooting: " + isShooting);
     }
 
     public void StopShooting()
