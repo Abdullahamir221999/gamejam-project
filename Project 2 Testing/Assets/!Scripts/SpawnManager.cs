@@ -32,7 +32,7 @@ public class SpawnManager : MonoBehaviour
         while (isSpawning && timer < levelSpawnSettings.spawnDuration)
         {
             int enemyIndex = Random.Range(0, enemyPrefabs.Length);
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 2.05f, spawnPosZ);
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1.1f, spawnPosZ);
             Instantiate(enemyPrefabs[enemyIndex], spawnPos, enemyPrefabs[enemyIndex].transform.rotation);
 
             timer += spawnInterval;
