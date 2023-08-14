@@ -2907,7 +2907,7 @@ Animator:
   m_GameObject: {fileID: 9110870902306467063}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cbae5dd072a54ec4490174e06c93087e, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c750458abcc9a6545822220c804246eb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2972,6 +2972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  moneyAmount: 20
 --- !u!1 &9169530634697806254
 GameObject:
   m_ObjectHideFlags: 0
