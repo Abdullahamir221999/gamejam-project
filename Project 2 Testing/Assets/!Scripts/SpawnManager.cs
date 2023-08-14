@@ -6,8 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
     private float spawnRangeX = 5;
-    private float spawnPosZ = 90;
-    private float startDelay = 2;
+    private float spawnPosZ = 60;
+    private float startDelay = 1;
     private float spawnInterval = 0.5f;
 
     public LevelSpawnSettings levelSpawnSettings; // Reference to the LevelSpawnSettings asset
