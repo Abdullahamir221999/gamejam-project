@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   bulletDamage: 100
+  splat: {fileID: 6146545414153545492, guid: 42e130cb86353724384dd6f697dfaa98, type: 3}
 --- !u!114 &7077311922751659411
 MonoBehaviour:
   m_ObjectHideFlags: 0

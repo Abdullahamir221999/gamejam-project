@@ -7,7 +7,7 @@ public class BlueBullet : MonoBehaviour
     public float life = 3;
     private Rigidbody bluebulletRb;
     public int bulletDamage = 100;
-
+    public ParticleSystem splat;
     void Start()
     {
         bluebulletRb = GetComponent<Rigidbody>();
@@ -21,6 +21,7 @@ public class BlueBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("BlueEnemy"))
         {
             ApplyDamageToEnemy(collision.gameObject);
+            fx();
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("RedEnemy"))
@@ -39,6 +40,11 @@ public class BlueBullet : MonoBehaviour
         {
             enemyScript.TakeDamage(bulletDamage);
         }
+    }
+    void fx()
+    {
+        ParticleSystem f = Instantiate(splat, transform.position, Quaternion.identity);
+        f.Play();
     }
 
 }

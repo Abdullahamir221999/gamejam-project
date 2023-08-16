@@ -7,7 +7,7 @@ public class GreenBullet : MonoBehaviour
     public float life = 3;
     private Rigidbody greenbulletRb;
     public int bulletDamage = 100;
-
+    public ParticleSystem splat;
 
     void Start()
     {
@@ -23,7 +23,9 @@ public class GreenBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("GreenEnemy"))
         {
             ApplyDamageToEnemy(collision.gameObject);
+            fx();
             Destroy(gameObject);
+
         }
         if (collision.gameObject.CompareTag("RedEnemy"))
         {
@@ -41,5 +43,12 @@ public class GreenBullet : MonoBehaviour
         {
             enemyScript.TakeDamage(bulletDamage);
         }
+    }
+
+    void fx()
+    {
+        ParticleSystem f = Instantiate(splat, transform.position, Quaternion.identity);
+        f.Play();
+        Destroy(f, 1);
     }
 }

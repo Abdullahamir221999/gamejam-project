@@ -10,6 +10,8 @@ TagManager:
   - GameEnd
   - Enemy
   - Road
+  - FxTemporaire
+  - Barrel
   layers:
   - Default
   - TransparentFX
