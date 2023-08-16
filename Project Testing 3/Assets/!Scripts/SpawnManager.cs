@@ -5,8 +5,8 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
-    private float spawnRangeX = 4;
-    private float spawnPosZ = 60;
+    private float spawnRangeX = 7.69f;
+    private float spawnPosZ = 28;
     private float startDelay = 1;
     private float spawnInterval = 0.5f;
 

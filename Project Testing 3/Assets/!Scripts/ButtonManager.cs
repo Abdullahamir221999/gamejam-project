@@ -16,7 +16,8 @@ public class ButtonManager : MonoBehaviour
     private bool isShooting = false;
     private ColorType selectedColor = ColorType.Red;
     private float shootingTimer = 0f;
-
+    public GameObject Turret;
+    public Material[] TurretColors;
     private void Update()
     {
         if (isShooting && joystickController != null && joystickController.IsJoystickDragging())
@@ -35,6 +36,7 @@ public class ButtonManager : MonoBehaviour
         selectedColor = ColorType.Red;
         isShooting = true;
         Debug.Log("is red shooting: " + isShooting);
+        Turret.GetComponent<MeshRenderer>().material = TurretColors[2];
     }
 
     public void GreenButtonPressed()
@@ -42,6 +44,7 @@ public class ButtonManager : MonoBehaviour
         selectedColor = ColorType.Green;
         isShooting = true;
         Debug.Log("is green shooting: " + isShooting);
+        Turret.GetComponent<MeshRenderer>().material = TurretColors[1];
     }
 
     public void BlueButtonPressed()
@@ -49,6 +52,7 @@ public class ButtonManager : MonoBehaviour
         selectedColor = ColorType.Blue;
         isShooting = true;
         Debug.Log("is blue shooting: " + isShooting);
+        Turret.GetComponent<MeshRenderer>().material = TurretColors[0];
     }
 
     public void StopShooting()
