@@ -21,12 +21,18 @@ public class BlueBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("BlueEnemy") || collision.gameObject.CompareTag("BigBlueEnemy"))
         {
             ApplyDamageToEnemy(collision.gameObject);
-            fx();
+
             Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else
+        {
+            Destroy(gameObject);
+
+            fx();
+
+        }
     }
-    void ApplyDamageToEnemy(GameObject enemy)
+        void ApplyDamageToEnemy(GameObject enemy)
     {
         Enemy enemyScript = enemy.GetComponent<Enemy>();
         if (enemyScript != null)

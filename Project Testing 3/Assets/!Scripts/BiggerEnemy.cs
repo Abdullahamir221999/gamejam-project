@@ -8,6 +8,7 @@ public class BiggerEnemy : MonoBehaviour
     public int moneyAmount = 10; // Adjust as needed
     private int currentHealth;
     private EnemyManager enemyManager;
+    public ParticleSystem splat;
 
     void Start()
     {
@@ -23,7 +24,30 @@ public class BiggerEnemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            fx();
         }
+    }
+
+    void fx()
+    {
+        //if (gameObject.CompareTag("BigRedEnemy"))
+        //{
+        //    ParticleSystem f = Instantiate(splat[2], transform.position, Quaternion.identity);
+        //    f.Play();
+        //}
+        //if (gameObject.CompareTag("BigBlueEnemy"))
+        //{
+        //    ParticleSystem f = Instantiate(splat[0], transform.position, Quaternion.identity);
+        //    f.Play();
+        //}
+        //if (gameObject.CompareTag("BigGreenEnemy"))
+        //{
+        //    ParticleSystem f = Instantiate(splat[1], transform.position, Quaternion.identity);
+        //    f.Play();
+        //}
+        ParticleSystem f = Instantiate(splat, transform.position, Quaternion.identity);
+        f.Play();
+        
     }
 
     private void Die()

@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 100;
     public int moneyAmount = 3;
     private int currentHealth;
+    public ParticleSystem splat;
     void Start()
     {
         currentHealth = maxHealth;
@@ -21,14 +22,20 @@ public class Enemy : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            fx();
             Die();
         }
     }
-
+    void fx()
+    {
+       ParticleSystem f = Instantiate(splat, transform.position, Quaternion.identity);
+         f.Play();
+    }
     private void Die()
     {
         enemyManager.EnemyDefeated(this);
         MoneyManager moneyManager = FindObjectOfType<MoneyManager>();
+
         if(moneyManager != null)
         {
             moneyManager.AddMoney(moneyAmount);

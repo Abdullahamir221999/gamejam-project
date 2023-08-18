@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061088814960299220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.9993014, y: -0, z: -0, w: 0.037374258}
+  m_LocalPosition: {x: 0, y: 0.01, z: -0.08}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -175.716, y: 0, z: 0}
 --- !u!33 &3416804878735751994
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   bulletDamage: 100
-  splat: {fileID: 6146545414153545492, guid: 42e130cb86353724384dd6f697dfaa98, type: 3}
+  splat: {fileID: 7022268795503775818, guid: 9f09ef55975e2f14fa77c8f39f479019, type: 3}
 --- !u!114 &7077311922751659411
 MonoBehaviour:
   m_ObjectHideFlags: 0

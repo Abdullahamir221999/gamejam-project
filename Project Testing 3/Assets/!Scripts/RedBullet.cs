@@ -18,10 +18,16 @@ public class RedBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("RedEnemy") || collision.gameObject.CompareTag("BigRedEnemy"))
         {
             ApplyDamageToEnemy(collision.gameObject);
-            PlayImpactEffect();
+            
             Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else
+        {
+            Destroy(gameObject);
+
+            PlayImpactEffect();
+
+        }
     }
 
     private void ApplyDamageToEnemy(GameObject enemy)

@@ -2034,6 +2034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   moneyAmount: 3
+  splat: {fileID: 6146545414153545492, guid: 0417d0ac2fa74bc45af00a15e07437b4, type: 3}
 --- !u!65 &8877254942711366752
 BoxCollider:
   m_ObjectHideFlags: 0

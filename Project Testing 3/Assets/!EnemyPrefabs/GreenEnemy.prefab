@@ -2956,6 +2956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   moneyAmount: 3
+  splat: {fileID: 6146545414153545492, guid: 61753401622c2a947a30e2147430e97d, type: 3}
 --- !u!1 &9169530634697806254
 GameObject:
   m_ObjectHideFlags: 0

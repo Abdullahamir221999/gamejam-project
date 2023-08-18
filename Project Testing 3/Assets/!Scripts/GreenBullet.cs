@@ -23,12 +23,18 @@ public class GreenBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("GreenEnemy") || collision.gameObject.CompareTag("BigGreenEnemy"))
         {
             ApplyDamageToEnemy(collision.gameObject);
-            fx();
+            
             Destroy(gameObject);
 
         }
-        Destroy(gameObject);
-        
+        else
+        {
+            Destroy(gameObject);
+
+            fx();
+
+        }
+
     }
     void ApplyDamageToEnemy(GameObject enemy)
     {

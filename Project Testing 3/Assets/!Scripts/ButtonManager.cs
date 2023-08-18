@@ -18,17 +18,21 @@ public class ButtonManager : MonoBehaviour
     private float shootingTimer = 0f;
     public GameObject Turret;
     public Material[] TurretColors;
+    public ParticleSystem smoke;
     private void Update()
     {
         if (isShooting && joystickController != null && joystickController.IsJoystickDragging())
         {
+           
             shootingTimer -= Time.deltaTime;
             if (shootingTimer <= 0f)
             {
                 ShootBullet();
+                
                 shootingTimer = shootingCooldown;
             }
         }
+        
     }
 
     public void RedButtonPressed()
@@ -64,5 +68,6 @@ public class ButtonManager : MonoBehaviour
     {
         int selectedBulletIndex = (int)selectedColor;
         var bullet = Instantiate(bulletPrefabs[selectedBulletIndex], bulletSpawnPoints[selectedBulletIndex].position, bulletSpawnPoints[selectedBulletIndex].rotation);
+        smoke.Play();
     }
 }
