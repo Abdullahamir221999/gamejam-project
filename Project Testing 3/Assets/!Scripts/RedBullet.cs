@@ -7,32 +7,42 @@ public class RedBullet : MonoBehaviour
     public float life = 3;
     public int bulletDamage = 100;
     public ParticleSystem splat;
-    void Awake()
+
+    private void Awake()
     {
         Destroy(gameObject, life);
     }
-    void OnCollisionEnter(Collision collision)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("RedEnemy"))
+        if (collision.gameObject.CompareTag("RedEnemy") || collision.gameObject.CompareTag("BigRedEnemy"))
         {
             ApplyDamageToEnemy(collision.gameObject);
-            fx();
+            PlayImpactEffect();
             Destroy(gameObject);
         }
         Destroy(gameObject);
     }
-    void ApplyDamageToEnemy(GameObject enemy)
+
+    private void ApplyDamageToEnemy(GameObject enemy)
     {
         Enemy enemyScript = enemy.GetComponent<Enemy>();
         if (enemyScript != null)
         {
             enemyScript.TakeDamage(bulletDamage);
         }
+
+        BiggerEnemy bigEnemyScript = enemy.GetComponent<BiggerEnemy>();
+        if (bigEnemyScript != null)
+        {
+            bigEnemyScript.TakeDamage(bulletDamage);
+        }
     }
-    void fx()
+
+    private void PlayImpactEffect()
     {
-        ParticleSystem f = Instantiate(splat, transform.position, Quaternion.identity);
-        f.Play();
-        Destroy(f, 1);
+        ParticleSystem impactEffect = Instantiate(splat, transform.position, Quaternion.identity);
+        impactEffect.Play();
+        Destroy(impactEffect, 1);
     }
 }

@@ -20,21 +20,15 @@ public class GreenBullet : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("GreenEnemy"))
+        if (collision.gameObject.CompareTag("GreenEnemy") || collision.gameObject.CompareTag("BigGreenEnemy"))
         {
             ApplyDamageToEnemy(collision.gameObject);
             fx();
             Destroy(gameObject);
 
         }
-        if (collision.gameObject.CompareTag("RedEnemy"))
-        {
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("BlueEnemy"))
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
+        
     }
     void ApplyDamageToEnemy(GameObject enemy)
     {
@@ -42,6 +36,11 @@ public class GreenBullet : MonoBehaviour
         if (enemyScript != null)
         {
             enemyScript.TakeDamage(bulletDamage);
+        }
+        BiggerEnemy bigEnemyScript = enemy.GetComponent<BiggerEnemy>();
+        if (bigEnemyScript != null)
+        {
+            bigEnemyScript.TakeDamage(bulletDamage);
         }
     }
 

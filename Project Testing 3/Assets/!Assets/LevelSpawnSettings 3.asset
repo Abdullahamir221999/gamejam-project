@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028a1b9f2bfb7fd449743d1ddc3c3559, type: 3}
   m_Name: LevelSpawnSettings 3
   m_EditorClassIdentifier: 
-  spawnDuration: 15
-  totalEnemiesInLevel: 30
+  spawnDuration: 20
+  totalEnemiesInLevel: 40

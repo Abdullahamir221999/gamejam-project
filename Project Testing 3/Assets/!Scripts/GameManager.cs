@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
     bool gameHasEnded = false;
     public float restartDelay = 1f;
 
-    //public LevelManager levelManager; // Reference to the LevelManager script.
+    // Add the turret position as a public Transform variable.
+    public Transform turretPosition;
+
     private void Awake()
     {
-        if(Instance ==null)
+        if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(this);

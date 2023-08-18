@@ -12,6 +12,9 @@ TagManager:
   - Road
   - FxTemporaire
   - Barrel
+  - BigRedEnemy
+  - BigBlueEnemy
+  - BigGreenEnemy
   layers:
   - Default
   - TransparentFX
