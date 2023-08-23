@@ -5,6 +5,7 @@ public class JoystickController : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     public RectTransform joystickBackground;
     public RectTransform joystickHandle;
+    public float sensitivity = 0.5f;
     public Transform turret;
 
     public float maxRotationAngle = 45f;
@@ -20,7 +21,7 @@ public class JoystickController : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        joystickInput = (eventData.position - joystickCenter).normalized;
+        joystickInput = (eventData.position - joystickCenter).normalized * sensitivity;
         joystickHandle.position = joystickCenter + joystickInput * Mathf.Min(joystickBackground.rect.width, joystickBackground.rect.height) * 0.5f;
         float angle = Mathf.Atan2(joystickInput.x, joystickInput.y) * Mathf.Rad2Deg;
         angle = Mathf.Clamp(angle, -maxRotationAngle, maxRotationAngle);
