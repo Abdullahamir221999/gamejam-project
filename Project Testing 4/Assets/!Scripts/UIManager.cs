@@ -40,6 +40,7 @@ public class UIManager : MonoBehaviour
     }
     public void ShowCompletePanel()
     {
+        
         //AdsManager._INSTANCE.SHOW_INTERSTITIAL_AD();
         GameManager.Instance.LevelNo += 1;
         Time.timeScale = 0;

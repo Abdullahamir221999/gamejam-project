@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2369626453325145128}
   - component: {fileID: 3193550639426361366}
   - component: {fileID: 1340874496486468863}
-  - component: {fileID: 8975172238127677334}
   - component: {fileID: -1243756509367259654}
+  - component: {fileID: -1757760944020770245}
   m_Layer: 0
-  m_Name: BlueBullet 3
+  m_Name: OrangeBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd400ae1154b778418d28d8d0f1469cd, type: 2}
+  - {fileID: 2100000, guid: c975cd290c4c73f40b0bc874ca108e12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,21 +116,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8975172238127677334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5661022542946620930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca42cc38d0b612d438a04d67d500115a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 3
-  bulletDamage: 100
-  splat: {fileID: 7022268795503775818, guid: 7377f38a94f13bd43924090d4a77f29e, type: 3}
 --- !u!114 &-1243756509367259654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,3 +129,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+--- !u!114 &-1757760944020770245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661022542946620930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9973eab0e00c22744815d160b972300c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 3
+  bulletDamage: 100
+  splat: {fileID: 7022268795503775818, guid: 6a743aa7fb2f8074398ba87fc2545b87, type: 3}

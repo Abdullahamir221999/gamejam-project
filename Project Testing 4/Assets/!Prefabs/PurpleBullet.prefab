@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 788603875268503569}
   - component: {fileID: 3763835186789096696}
   - component: {fileID: 5196345151790734845}
-  - component: {fileID: 6388601260543987402}
+  - component: {fileID: 4261925380161266942}
   m_Layer: 0
   m_Name: PurpleBullet
   m_TagString: Untagged
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
---- !u!114 &6388601260543987402
+--- !u!114 &4261925380161266942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   bulletDamage: 100
-  splat: {fileID: 0}
+  splat: {fileID: 7022268795503775818, guid: b414ea63f960428428d3e8c300834062, type: 3}

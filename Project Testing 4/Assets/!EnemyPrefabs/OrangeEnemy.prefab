@@ -430,8 +430,8 @@ GameObject:
   - component: {fileID: 8622377947651003379}
   - component: {fileID: 5696224099376980743}
   m_Layer: 0
-  m_Name: TurquoiseEnemy
-  m_TagString: TurquoiseEnemy
+  m_Name: OrangeEnemy
+  m_TagString: OrangeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   moneyAmount: 3
-  splat: {fileID: 6146545414153545492, guid: a6b5e1e59f68091418ecdb9422fbaae0, type: 3}
+  splat: {fileID: 6146545414153545492, guid: 4538e85795ebe5640b1e492a15e28abc, type: 3}
 --- !u!65 &5696224099376980743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2497,7 +2497,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa49584dff939014b917c0ba262e0db4, type: 2}
+  - {fileID: 2100000, guid: c975cd290c4c73f40b0bc874ca108e12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -18,7 +18,7 @@ public class PurpleBullet : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("PurpleEnemy") || collision.gameObject.CompareTag("BigPurpleEnemy"))
+        if (collision.gameObject.CompareTag("PurpleEnemy") /*|| collision.gameObject.CompareTag("BigPurpleEnemy")*/)
         {
             ApplyDamageToEnemy(collision.gameObject);
 

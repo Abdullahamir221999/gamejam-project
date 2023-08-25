@@ -18,6 +18,10 @@ TagManager:
   - PurpleEnemy
   - WhiteEnemy
   - TurquoiseEnemy
+  - Level
+  - NormalButton
+  - HighlightedButton
+  - OrangeEnemy
   layers:
   - Default
   - TransparentFX

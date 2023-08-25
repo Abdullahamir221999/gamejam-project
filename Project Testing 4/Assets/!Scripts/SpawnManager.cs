@@ -14,8 +14,12 @@ public class SpawnManager : MonoBehaviour
     private UIManager uIManager;
     private bool isSpawning = true;
 
-    void Start()
+    void Awake()
     {
+        enemyPrefabs = GameManager.Instance.enemiesAtLevel();       
+    }
+    void Start()
+    {     
         uIManager = FindObjectOfType<UIManager>();
         StartCoroutine(SpawnEnemiesWithTimer());
     }
