@@ -2035,6 +2035,7 @@ MonoBehaviour:
   maxHealth: 100
   moneyAmount: 3
   splat: {fileID: 6146545414153545492, guid: 0417d0ac2fa74bc45af00a15e07437b4, type: 3}
+  splash: {fileID: 3554800332118061776, guid: 063185089668d2d4c94482f3c7fca533, type: 3}
 --- !u!65 &8877254942711366752
 BoxCollider:
   m_ObjectHideFlags: 0
