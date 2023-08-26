@@ -32,7 +32,7 @@ public class GamePlayHandler : MonoBehaviour
             }
             else
             {
-                Gta_Levels[i].Level.gameObject.SetActive(false);
+               // Gta_Levels[i].Level.gameObject.SetActive(false);
             }
         }
     }
