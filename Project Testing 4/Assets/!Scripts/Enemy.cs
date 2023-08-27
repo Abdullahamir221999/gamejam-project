@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour
     private int currentHealth;
     public ParticleSystem splat;
     public GameObject splash;
+    public GameObject coinPrefab;
+    public float coinSpawnHeight = 2.0f;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,6 +29,8 @@ public class Enemy : MonoBehaviour
         {
             fx();
             Die();
+            Vector3 spawnPos = new Vector3(transform.position.x, coinSpawnHeight, transform.position.z); 
+            Instantiate(coinPrefab, spawnPos, Quaternion.identity);
         }
     }
     void fx()

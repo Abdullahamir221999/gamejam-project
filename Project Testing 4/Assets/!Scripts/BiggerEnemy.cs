@@ -9,6 +9,9 @@ public class BiggerEnemy : MonoBehaviour
     private int currentHealth;
     private EnemyManager enemyManager;
     public ParticleSystem splat;
+    public GameObject coinPrefab;
+    public float coinSpawnHeight1 = 1.0f;
+    public float coinSpawnHeight2 = 3.0f;
 
     void Start()
     {
@@ -25,6 +28,10 @@ public class BiggerEnemy : MonoBehaviour
         {
             Die();
             fx();
+            Vector3 spawnPos = new Vector3(transform.position.x, coinSpawnHeight1, transform.position.z);
+            Instantiate(coinPrefab, spawnPos, Quaternion.identity);
+            Vector3 spawnPos2 = new Vector3(transform.position.x, coinSpawnHeight2, transform.position.z);
+            Instantiate(coinPrefab, spawnPos2, Quaternion.identity);
         }
     }
 

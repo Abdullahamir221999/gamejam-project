@@ -2265,6 +2265,8 @@ MonoBehaviour:
   moneyAmount: 3
   splat: {fileID: 6146545414153545492, guid: 42e130cb86353724384dd6f697dfaa98, type: 3}
   splash: {fileID: 5011379016463970513, guid: a1ef82d6a7951114bb6b49507e6ff509, type: 3}
+  coinPrefab: {fileID: 5718596353290309067, guid: fa2c57d3f28a5e6419393e8bc3eeb32a,
+    type: 3}
 --- !u!65 &351406466543329823
 BoxCollider:
   m_ObjectHideFlags: 0

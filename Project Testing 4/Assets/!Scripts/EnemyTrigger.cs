@@ -10,7 +10,7 @@ public class EnemyTrigger : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("RedEnemy") || other.CompareTag("BlueEnemy") || other.CompareTag("GreenEnemy") || other.CompareTag("BigRedEnemy") || other.CompareTag("BigGreenEnemy") || other.CompareTag("BigBlueEnemy") || other.CompareTag("PurpleEnemy"))
+        if (other.CompareTag("RedEnemy") || other.CompareTag("BlueEnemy") || other.CompareTag("GreenEnemy") || other.CompareTag("BigRedEnemy") || other.CompareTag("BigGreenEnemy") || other.CompareTag("BigBlueEnemy") || other.CompareTag("PurpleEnemy") || other.CompareTag("OrangeEnemy") || other.CompareTag("TurquoiseEnemy"))
         {
             //AdsManager._INSTANCE.SHOW_INTERSTITIAL_AD();
             uiManager.ShowLevelFailed();

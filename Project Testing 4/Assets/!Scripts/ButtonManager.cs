@@ -31,7 +31,7 @@ public class ButtonManager : MonoBehaviour
         {
             count++;
             PlayerPrefs.SetInt("gamestartedfirsttime", count);
-            shootingCooldown = 0.3f;
+            shootingCooldown = 0.5f;
             PlayerPrefs.SetFloat("cooldown", shootingCooldown);
         }
         shootingCooldown = PlayerPrefs.GetFloat("cooldown");
